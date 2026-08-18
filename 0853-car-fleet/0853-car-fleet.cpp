@@ -1,7 +1,7 @@
 class Solution {
 public:
     int carFleet(int target, vector<int>& position, vector<int>& speed) {
-        vector<pair<int, double>> cars;
+        vector<pair<int, double>> cars(position.size());
 
         for (int i = 0; i < position.size(); i++)
             cars.push_back({position[i], (double)(target - position[i]) / speed[i]});
